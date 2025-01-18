@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import '../Body/Body.css';
 import B1 from '../img/burgue.png';
-import C2 from '../img/carro3s.png';
 import C3 from '../img/carro1s.png';
 import logo from '../img/logo.png';
 
