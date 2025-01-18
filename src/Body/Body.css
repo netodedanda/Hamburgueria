@@ -1,0 +1,320 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f8f8f8;
+}
+
+/* Container para centralizar todo o conteúdo com largura máxima de 1280px */
+.container-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* Mudei de 1280px para 100% para maior flexibilidade */
+  max-width: 1280px; /* Limita o tamanho máximo */
+  margin: 0 auto; /* Centraliza */
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5%;
+  padding: 40px 0;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Estilos do título */
+h1 {
+  color: #ff0000;
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* Estilos dos botões */
+button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  background-color: #C12A21;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #A02119;
+}
+
+/* Estilos do carrossel */
+.carrossel {
+  position: relative;
+  width: 100%;
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+.carrossel-imagens {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carrossel-imagens img {
+  width: 100%;
+  height: auto;
+  border-radius: 28px;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  color: white;
+  border: none;
+  font-size: 18px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  transform: translateY(-50%);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Estilos do cardápio */
+.cardapio {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 20px;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.cardapio p {
+  font-size: 2rem;
+  color: #C12A21;
+  margin-bottom: 20px;
+}
+
+.cardapio-items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.item {
+  text-align: center;
+  border: 1px solid #000000;
+  border-radius: 15px;
+  padding: 20px;
+  background-color: #C12A21;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.item:hover {
+  transform: translateY(-10px);
+}
+
+.btninfo {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  color: #C12A21;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.btninfo:hover {
+  color: #A02119;
+}
+
+.item img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.item p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.imgMoba {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+}
+
+.itemName {
+  display: flex;
+  justify-content: center;
+}
+
+.itemSelect {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-info {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  width: 80%; /* A largura foi ajustada para 80% */
+  max-width: 1280px; /* Limite de largura máximo */
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border: 2px solid #ccc;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.info-content {
+  text-align: right;
+  align-items: flex-start;
+}
+
+/* Estilos do footer */
+.footer {
+  width: 100%;
+  background-color: #5f280b;
+  color: #ecf0f1;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1280px;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-left: -8%;
+
+}
+
+.footer-logo .logo {
+  width: 100%;
+}
+
+.footer-links ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links ul li {
+  margin: 0;
+}
+
+.footer-links ul li a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #3498db;
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-social .social-icon {
+  color: #ecf0f1;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer-social .social-icon:hover {
+  color: #3498db;
+}
+
+.footer-bottom {
+  background-color: #5f280b;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+
+@media (max-width: 768px) {
+  .cardapio-items {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .item {
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cardapio-items {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+}
