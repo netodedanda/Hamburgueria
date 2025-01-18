@@ -9,7 +9,6 @@ body {
   background-color: #f8f8f8;
 }
 
-/* Container para centralizar todo o conteúdo com largura máxima de 1280px */
 .container-body {
   display: flex;
   flex-direction: column;
@@ -36,7 +35,6 @@ body {
   text-align: center;
 }
 
-/* Estilos do título */
 h1 {
   color: #ff0000;
   font-size: 3.5rem;
@@ -44,7 +42,6 @@ h1 {
   line-height: 1.2;
 }
 
-/* Estilos dos botões */
 button {
   margin-top: 20px;
   padding: 12px 24px;
@@ -61,7 +58,6 @@ button:hover {
   background-color: #A02119;
 }
 
-/* Estilos do carrossel */
 .carrossel {
   position: relative;
   width: 100%;
@@ -100,7 +96,6 @@ button {
   right: 10px;
 }
 
-/* Estilos do cardápio */
 .cardapio {
   display: flex;
   justify-content: center;
@@ -195,8 +190,8 @@ button {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10000;
-  width: 80%; /* A largura foi ajustada para 80% */
-  max-width: 1280px; /* Limite de largura máximo */
+  width: 80%;
+  max-width: 1280px;
   background-color: rgb(255, 255, 255);
   border-radius: 15px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
@@ -211,7 +206,6 @@ button {
   align-items: flex-start;
 }
 
-/* Estilos do footer */
 .footer {
   width: 100%;
   background-color: #5f280b;
@@ -286,7 +280,6 @@ button {
   margin: 0;
 }
 
-/* Responsividade para telas pequenas */
 @media (max-width: 768px) {
   .cardapio-items {
     grid-template-columns: repeat(2, 1fr);
@@ -302,7 +295,7 @@ button {
   }
 
   .item-info {
-    grid-template-columns: 1fr; /* Coluna única em telas menores */
+    grid-template-columns: 1fr;
   }
 }
 
@@ -322,15 +315,15 @@ button {
   }
 
   .footer-container {
-    flex-direction: column; /* Empilha os elementos do footer */
+    flex-direction: column;
     margin-left: 0;
   }
 
   .footer-links ul {
-    flex-direction: column; /* Lista de links empilhada */
+    flex-direction: column;
   }
 
   .footer-social {
-    flex-direction: column; /* Ícones sociais empilhados */
+    flex-direction: column;
   }
 }
