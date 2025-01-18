@@ -1,31 +1,20 @@
 .header {
   background-color: #C12A21;
-  margin-top: 10px;
   border-radius: 30px;
   display: flex;
-  justify-content: space-evenly; /* Alinha a logo à esquerda e o menu à direita */
+  justify-content: space-between; /* Alinha logo à esquerda e menu à direita */
   align-items: center;
-  width: 1280px;
+  width: 100%; /* Garantir que o header ocupe 100% da largura */
+  max-width: 1280px; /* Limitar a largura máxima */
   height: 70px;
   font-family: 'Poppins', sans-serif;
   padding: 0 20px;
   margin: 0 auto; /* Centraliza o header na tela */
-  margin-top: 10px;
 }
 
 .logo {
   max-height: 80px; /* Tamanho da logo */
   margin-right: 20px; /* Espaçamento entre a logo e o menu */
-}
-
-.header h1 {
-  color: white;
-}
-
-.header-1 h1 {
-  font-size: 18px;
-  color: #333;
-  margin: 0;
 }
 
 nav ul {
@@ -34,11 +23,10 @@ nav ul {
   margin: 0;
   padding: 0;
   gap: 15px;
-  justify-content: center; /* Centraliza os itens de navegação */
+  justify-content: flex-end; /* Alinha os itens à direita */
 }
 
 nav ul li {
-  margin: 0;
   height: 70px;
   border-right: 1px solid white;
   display: flex;
@@ -58,7 +46,6 @@ nav ul li a {
   align-items: center;
   justify-content: center;
   font-weight: 500;
-  width: 100%;
 }
 
 nav ul li a:active {
@@ -70,43 +57,47 @@ nav ul li a:active {
   margin-right: 8px;
 }
 
-/* Media Query para telas menores que 768px */
+/* Media Query para telas menores que 768px (Tablets e Celulares) */
 @media (max-width: 768px) {
   .header {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
+    flex-direction: column; /* Alinha logo e menu verticalmente */
+    padding: 20px 10px; /* Ajusta o espaçamento interno */
+    height: auto; /* Ajusta a altura para acomodar o conteúdo */
+    align-items: center; /* Centraliza os itens dentro do header */
   }
 
   .logo {
-    max-height: 80px;
-    margin-bottom: 10px;
+    max-height: 60px; /* Reduz a logo para telas menores */
+    margin-bottom: 10px; /* Espaço entre a logo e o menu */
   }
 
   nav ul {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* Torna os itens de menu verticais */
+    align-items: center; /* Centraliza os itens do menu */
     gap: 10px;
+    width: 100%; /* Faz o menu ocupar a largura inteira */
   }
 
   nav ul li {
-    border-right: none;
+    width: 100%; /* Faz cada item ocupar a largura total */
+    border-right: none; /* Remove as bordas entre os itens */
   }
 
   nav ul li a {
-    font-size: 16px;
+    font-size: 16px; /* Diminui o tamanho da fonte */
     padding: 10px;
     text-align: center;
   }
 }
 
-/* Media Query para telas menores que 480px */
+/* Media Query para telas menores que 480px (Celulares muito pequenos) */
 @media (max-width: 480px) {
   .logo {
-    max-height: 60px; /* Ajuste de tamanho para telas muito pequenas */
+    max-height: 50px; /* Logo ainda menor em telas muito pequenas */
   }
 
   nav ul li a {
-    font-size: 14px;
+    font-size: 14px; /* Reduz ainda mais o tamanho da fonte */
+    padding: 8px;
   }
 }
